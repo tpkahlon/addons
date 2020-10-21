@@ -9,8 +9,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
+      "matches": ["https://*/*"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["index.js"]
+  }
 }
