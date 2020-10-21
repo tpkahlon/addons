@@ -1,0 +1,16 @@
+{
+  "description": "Find how many and what sort of z-index declarations are there on a page. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/z-index-finder",
+  "manifest_version": 2,
+  "name": "z-index-finder",
+  "version": "1.0",
+  "homepage_url": "https://github.com/tpkahlon/z-index-finder",
+  "icons": {
+    "512": "icons/border-512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
