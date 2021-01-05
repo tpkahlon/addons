@@ -18,5 +18,5 @@ if (window.location.href.includes("news.ycombinator.com")) {
     .forEach((e) => (e.style.cssText = "color:white"));
 
   document.querySelector("body").style.cssText =
-    "background-color:#222;color:#fff";
+    "background-color:#051818;color:#fff";
 }
