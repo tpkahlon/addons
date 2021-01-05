@@ -1,9 +1,9 @@
 {
-  "description": "Find how many and what sort of z-index declarations are there on a page. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/z-index-finder",
+  "description": "Dark mode for Hackernews site. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/dark-mode-hackernews",
   "manifest_version": 2,
-  "name": "z-index-finder",
+  "name": "dark-mode-hackernews",
   "version": "1.2",
-  "homepage_url": "https://github.com/tpkahlon/z-index-finder",
+  "homepage_url": "https://github.com/tpkahlon/dark-mode-hackernews",
   "icons": {
     "512": "icons/border-512.png"
   },
