@@ -1,11 +1,11 @@
 {
-  "description": "Dark mode for Hackernews site. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/dark-mode-hackernews",
+  "description": "Dark mode for Hackernews site",
   "manifest_version": 2,
-  "name": "dark-mode-hackernews",
-  "version": "1.2",
+  "name": "Dark Mode (Hackernews)",
+  "version": "1.3",
   "homepage_url": "https://github.com/tpkahlon/dark-mode-hackernews",
   "icons": {
-    "512": "icons/border-512.png"
+    "512": "icons/border-512.gif"
   },
   "content_scripts": [
     {
