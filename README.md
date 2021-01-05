@@ -1,11 +1,11 @@
-# z-index-finder
+# dark-mode-hackernews
 
 ## What it does
 
 This extension includes:
 
-* ability to quickly test and see what z-index declarations exist on current page.
+* ability to activate dark mode on hackernews website
 
 ## What it shows
 
-* See how many and what sort of z-index declarations are on the page in Console
+* dark mode for users specific to hackernews website
