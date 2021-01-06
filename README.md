@@ -4,7 +4,8 @@
 
 This extension includes:
 
-* ability to activate dark mode on hackernews website
+- Dark mode for HackerNews main site
+- Dark mode for HackerNews search site
 
 ## Stable Version
 
