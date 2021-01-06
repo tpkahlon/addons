@@ -1,4 +1,4 @@
-# dark-mode-hackernews
+# Dark Mode for HackerNews
 
 ## What it does
 
