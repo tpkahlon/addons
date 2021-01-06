@@ -3,24 +3,28 @@
 const searchDOM = () => {
   const a = document.querySelectorAll("a");
   const extrasA = document.querySelectorAll(
-    "span, .Story_comment, .SearchHeader_label, p"
+    "span, .Story_comment, .SearchHeader_label"
   );
   const extrasB = document.querySelectorAll(
-    ".storylink, .commtext, .commtext p, .container a, .Story_title span"
+    ".container a, .Story_title span"
   );
   const extrasC = document.querySelectorAll(".Story_meta a");
   const extrasD = document.querySelectorAll(
     ".SearchResults, .SearchFilters, .SearchHeader_search, .Pagination"
   );
+  const more = document.querySelectorAll(".Story_comment span, .Story_comment p");
+  const forms = document.querySelectorAll("input, textarea");
   const body = document.querySelector("body");
   a.forEach((e) => (e.style.cssText = "color:inherit"));
-  extrasA.forEach((e) => (e.style.cssText = "color:grey"));
-  extrasB.forEach((e) => (e.style.cssText = "color:white"));
+  extrasA.forEach((e) => (e.style.cssText = "color:#666"));
+  extrasB.forEach((e) => (e.style.cssText = "color:#AAA;text-decoration:underline"));
   extrasC.forEach((e) => (e.style.cssText = "color:inherit"));
   extrasD.forEach(
-    (e) => (e.style.cssText = "background-color:transparent;color:grey")
+    (e) => (e.style.cssText = "background-color:transparent;color:#666")
   );
-  body.style.cssText = "background-color:#051818;color:grey!important";
+  more.forEach((e) => (e.style.cssText = "color:#AAA;font-weight:normal"));
+  forms.forEach((e) => (e.style.cssText = "outline:1px solid #666;background:#051818;color:#AAA"));
+  body.style.cssText = "background-color:#051818;color:#666!important";
 };
 
 const mainDOM = () => {
@@ -29,11 +33,13 @@ const mainDOM = () => {
   const extras = document.querySelectorAll(".pagetop *, span, p");
   const more = document.querySelectorAll(".storylink, .commtext, .commtext p");
   const body = document.querySelector("body");
+  const forms = document.querySelectorAll("input, textarea");
   strip.forEach((e) => e.setAttribute("bgcolor", ""));
   a.forEach((e) => (e.style.cssText = "color:inherit"));
-  extras.forEach((e) => (e.style.cssText = "color:grey"));
-  more.forEach((e) => (e.style.cssText = "color:white"));
-  body.style.cssText = "background-color:#051818;color:grey!important";
+  extras.forEach((e) => (e.style.cssText = "color:#666"));
+  more.forEach((e) => (e.style.cssText = "color:#AAA;"));
+  forms.forEach((e) => (e.style.cssText = "background:#051818;color:#AAA"));
+  body.style.cssText = "background-color:#051818;color:#666!important";
 };
 
 const refreshSearch = () => {
