@@ -9,4 +9,4 @@ This extension includes:
 
 ## Stable Version
 
-- **1.8**: Update dark mode for HackerNews Search and Main site
+- **1.9**: Fix dark mode bug for HackerNews search site
