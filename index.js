@@ -1,67 +1,83 @@
 "use strict";
 
-const refresh = () => {
-  document
-    .querySelectorAll("td, #hnmain")
-    .forEach((e) => e.setAttribute("bgcolor", ""));
-
-  document
-    .querySelectorAll("a")
-    .forEach((e) => (e.style.cssText = "color:inherit"));
-
-  document
-    .querySelectorAll(
-      ".pagetop *, span, .Story_comment, .SearchHeader_label, p"
-    )
-    .forEach((e) => (e.style.cssText = "color:grey"));
-
-  document
-    .querySelectorAll(
-      ".storylink, .commtext, .commtext p, .container a, .Story_title span"
-    )
-    .forEach((e) => (e.style.cssText = "color:white"));
-
-  document
-    .querySelectorAll(".Story_meta a")
-    .forEach((e) => (e.style.cssText = "color:inherit"));
-
-  document
-    .querySelectorAll(
-      ".SearchResults, .SearchFilters, .SearchHeader_search, .Pagination"
-    )
-    .forEach(
-      (e) => (e.style.cssText = "background-color:transparent;color:grey")
-    );
-
-  document.querySelector("body").style.cssText =
-    "background-color:#051818;color:grey!important";
+const searchDOM = () => {
+  const a = document.querySelectorAll("a");
+  const extrasA = document.querySelectorAll(
+    "span, .Story_comment, .SearchHeader_label, p"
+  );
+  const extrasB = document.querySelectorAll(
+    ".storylink, .commtext, .commtext p, .container a, .Story_title span"
+  );
+  const extrasC = document.querySelectorAll(".Story_meta a");
+  const extrasD = document.querySelectorAll(
+    ".SearchResults, .SearchFilters, .SearchHeader_search, .Pagination"
+  );
+  const body = document.querySelector("body");
+  a.forEach((e) => (e.style.cssText = "color:inherit"));
+  extrasA.forEach((e) => (e.style.cssText = "color:grey"));
+  extrasB.forEach((e) => (e.style.cssText = "color:white"));
+  extrasC.forEach((e) => (e.style.cssText = "color:inherit"));
+  extrasD.forEach(
+    (e) => (e.style.cssText = "background-color:transparent;color:grey")
+  );
+  body.style.cssText = "background-color:#051818;color:grey!important";
 };
 
-if (
-  window.location.href.includes("news.ycombinator.com") ||
-  window.location.href.includes("hn.algolia.com")
-) {
-  refresh();
+const mainDOM = () => {
+  const strip = document.querySelectorAll("td, #hnmain");
+  const a = document.querySelectorAll("a");
+  const extras = document.querySelectorAll(".pagetop *, span, p");
+  const more = document.querySelectorAll(".storylink, .commtext, .commtext p");
+  const body = document.querySelector("body");
+  strip.forEach((e) => e.setAttribute("bgcolor", ""));
+  a.forEach((e) => (e.style.cssText = "color:inherit"));
+  extras.forEach((e) => (e.style.cssText = "color:grey"));
+  more.forEach((e) => (e.style.cssText = "color:white"));
+  body.style.cssText = "background-color:#051818;color:grey!important";
+};
 
-  let change = false;
+const refreshSearch = () => {
+  setTimeout(() => {
+    searchDOM();
+  }, 500);
+};
 
-  window.addEventListener("keyup", () => {
-    if (change) {
-      refresh();
-    }
-  });
+const refreshMain = () => {
+  mainDOM();
+};
 
-  window.addEventListener("keydown", () => {
-    if (change) {
-      refresh();
-    }
-  });
+const init = (cat) => {
+  if (cat === "search") {
+    let change = false;
+    window.addEventListener("keyup", () => {
+      if (change) {
+        refreshSearch();
+      }
+    });
 
-  document.querySelector("input").addEventListener("focus", () => {
-    change = true;
-  });
+    window.addEventListener("keydown", () => {
+      if (change) {
+        refreshSearch();
+      }
+    });
 
-  document.querySelector("input").addEventListener("blur", () => {
-    change = false;
-  });
+    document.querySelector("input").addEventListener("focus", () => {
+      change = true;
+    });
+
+    document.querySelector("input").addEventListener("blur", () => {
+      change = false;
+    });
+    refreshSearch();
+  } else {
+    refreshMain();
+  }
+};
+
+if (window.location.href.includes("news.ycombinator.com")) {
+  init();
+}
+
+if (window.location.href.includes("hn.algolia.com")) {
+  init("search");
 }
