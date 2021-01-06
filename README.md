@@ -6,6 +6,7 @@ This extension includes:
 
 * ability to activate dark mode on hackernews website
 
-## What it shows
+## Issues
 
-* dark mode for users specific to hackernews website
+- On search page, when a user enters something, some of the text appears in black colour
+- If someone has possible solution for this issue, please send a PR, highly appreciated
