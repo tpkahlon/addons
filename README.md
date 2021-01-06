@@ -1,12 +1,7 @@
-# Dark Mode for HackerNews
+# Addons
 
-## What it does
+- For firefox users
 
-This extension includes:
+## Listing
 
-- Dark mode for HackerNews main site
-- Dark mode for HackerNews search site
-
-## Stable Version
-
-- **1.9**: Fix dark mode bug for HackerNews search site
+- [Dark Mode for HackerNews](https://addons.mozilla.org/addon/dark-mode-hackernews)
