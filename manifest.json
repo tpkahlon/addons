@@ -1,7 +1,7 @@
 {
   "description": "Dark mode for HackerNews",
   "manifest_version": 2,
-  "name": "Dark Mode (Hackernews)",
+  "name": "Dark mode for HackerNews",
   "version": "1.8",
   "homepage_url": "https://github.com/tpkahlon/dark-mode-hackernews",
   "icons": {
