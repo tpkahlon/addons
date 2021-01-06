@@ -20,11 +20,11 @@ const searchDOM = () => {
   extrasB.forEach((e) => (e.style.cssText = "color:#AAA;text-decoration:underline"));
   extrasC.forEach((e) => (e.style.cssText = "color:inherit"));
   extrasD.forEach(
-    (e) => (e.style.cssText = "background-color:transparent;color:#666")
+    (e) => (e.style.cssText = "background:transparent;color:#666")
   );
   more.forEach((e) => (e.style.cssText = "color:#AAA;font-weight:normal"));
-  forms.forEach((e) => (e.style.cssText = "outline:1px solid #666;background:#051818;color:#AAA"));
-  body.style.cssText = "background-color:#051818;color:#666!important";
+  forms.forEach((e) => (e.style.cssText = "outline:1px solid #666;background:#131313;color:#AAA"));
+  body.style.cssText = "background:#131313;color:#666!important";
 };
 
 const mainDOM = () => {
@@ -38,8 +38,8 @@ const mainDOM = () => {
   a.forEach((e) => (e.style.cssText = "color:inherit"));
   extras.forEach((e) => (e.style.cssText = "color:#666"));
   more.forEach((e) => (e.style.cssText = "color:#AAA;"));
-  forms.forEach((e) => (e.style.cssText = "background:#051818;color:#AAA"));
-  body.style.cssText = "background-color:#051818;color:#666!important";
+  forms.forEach((e) => (e.style.cssText = "background:#131313;color:#AAA"));
+  body.style.cssText = "background:#131313;color:#666!important";
 };
 
 const refreshSearch = () => {
