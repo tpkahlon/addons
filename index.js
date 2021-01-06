@@ -39,7 +39,7 @@ const mainDOM = () => {
 const refreshSearch = () => {
   setTimeout(() => {
     searchDOM();
-  }, 500);
+  }, 1000);
 };
 
 const refreshMain = () => {
@@ -49,25 +49,30 @@ const refreshMain = () => {
 const init = (cat) => {
   if (cat === "search") {
     let change = false;
-    window.addEventListener("keyup", () => {
-      if (change) {
-        refreshSearch();
-      }
-    });
 
-    window.addEventListener("keydown", () => {
-      if (change) {
-        refreshSearch();
-      }
-    });
+    const setupEvents = () => {
+      window.addEventListener("keyup", () => {
+        if (change) {
+          refreshSearch();
+        }
+      });
+      window.addEventListener("keydown", () => {
+        if (change) {
+          refreshSearch();
+        }
+      });
+      document.querySelector("input").addEventListener("focus", () => {
+        change = true;
+      });
+      document.querySelector("input").addEventListener("blur", () => {
+        change = false;
+      });
+    }
 
-    document.querySelector("input").addEventListener("focus", () => {
-      change = true;
-    });
+    setTimeout(() => {
+      setupEvents();
+    }, 1000);
 
-    document.querySelector("input").addEventListener("blur", () => {
-      change = false;
-    });
     refreshSearch();
   } else {
     refreshMain();
