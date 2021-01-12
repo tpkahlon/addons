@@ -9,4 +9,4 @@ This extension includes:
 
 ## Stable Version
 
-- **2.1**: Apply colors recommeded by Material design
+- **2.2**: Fix colors

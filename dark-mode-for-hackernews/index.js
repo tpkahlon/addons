@@ -6,24 +6,31 @@ const searchDOM = () => {
     "span, .Story_comment, .SearchHeader_label"
   );
   const extrasB = document.querySelectorAll(
-    ".container a, .Story_title span"
+    ".container a, .Story_title span, .Story_title p"
   );
   const extrasC = document.querySelectorAll(".Story_meta a");
   const extrasD = document.querySelectorAll(
     ".SearchResults, .SearchFilters, .SearchHeader_search, .Pagination"
   );
-  const more = document.querySelectorAll(".Story_comment span, .Story_comment p");
+  const more = document.querySelectorAll(
+    ".Story_comment span, .Story_comment p"
+  );
   const forms = document.querySelectorAll("input, textarea");
   const body = document.querySelector("body");
   a.forEach((e) => (e.style.cssText = "color:inherit"));
   extrasA.forEach((e) => (e.style.cssText = "color:#666"));
-  extrasB.forEach((e) => (e.style.cssText = "color:#AAA;text-decoration:underline"));
+  extrasB.forEach(
+    (e) => (e.style.cssText = "color:#AAA;text-decoration:underline")
+  );
   extrasC.forEach((e) => (e.style.cssText = "color:inherit"));
   extrasD.forEach(
     (e) => (e.style.cssText = "background:transparent;color:#666")
   );
   more.forEach((e) => (e.style.cssText = "color:#AAA;font-weight:normal"));
-  forms.forEach((e) => (e.style.cssText = "outline:1px solid #666;background:#131313;color:#AAA"));
+  forms.forEach(
+    (e) =>
+      (e.style.cssText = "outline:1px solid #666;background:#131313;color:#AAA")
+  );
   body.style.cssText = "background:#131313;color:#666!important";
 };
 
@@ -73,7 +80,7 @@ const init = (cat) => {
       document.querySelector("input").addEventListener("blur", () => {
         change = false;
       });
-    }
+    };
 
     setTimeout(() => {
       setupEvents();
